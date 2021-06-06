@@ -24,6 +24,8 @@ fetch('http://localhost:4000/code-sync').then((r)=>r.json()).then(eval);
 ```
 If everything is working correctly, you'll see a yellow circle in the game area with all your spirits patrolling it randomly. Try changing the `PATROL_RADIUS` to 200 in `client/main.js`. Once you save, the code will automatically update in the running client!
 
+<img width="1117" alt="Screen Shot 2021-06-06 at 12 17 55 PM" src="https://user-images.githubusercontent.com/1320825/120931830-4693a100-c6c1-11eb-987a-8b06a12c6457.png">
+
 ## Custom build targets
 If you have a preferred build tool for bundling your code already, you can direct the code-sync server to watch that output file instead. This project includes a demo file, but you can watch any file on your system. Use the following environment variable to configure your build target before running the code-sync server.
 ```

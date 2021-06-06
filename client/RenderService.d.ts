@@ -2,11 +2,15 @@
 
 declare type Position = [x: number, y: number]
 
+declare interface Positioned {
+	position: Position
+}
+
 declare namespace RenderService {
-	function circle(pos: Position, radius: number, color?: string): void;
-	function ping(pos: Position): void;
-	function line(pos1: Position, pos2: Position, color?: string): void;
-	function text(pos: Position, str: string, color?: string): void;
+	function circle(pos: Position | Positioned, radius: number, color?: string): void;
+	function ping(pos: Position | Positioned): void;
+	function line(pos1: Position | Positioned, pos2: Position | Positioned, color?: string): void;
+	function text(pos: Position | Positioned, str: string, color?: string): void;
 	function log(str: string): void;
 }
 

@@ -68,7 +68,7 @@ class Renderer {
         color: args[3]
       });
     } else if (renderType == 'PLOG') {
-      const logId = args[1];
+      const logId = args[0];
       if (this.logMap[logId] === undefined) {
         this.logMap[logId] = true;
         console.log(JSON.parse(args[1]));

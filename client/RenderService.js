@@ -7,7 +7,10 @@ transformPosToDynamic = (pos) => {
   }
   return pos;
 };
-let persistedLogIndex = 0;
+
+if (memory['persistedLogIndex'] === undefined) {
+  memory['persistedLogIndex'] = 0;
+}
 
 module.exports = {
   circle: (pos, radius, color = '#0f0') => {
@@ -28,7 +31,8 @@ module.exports = {
     console.log(`RENDER@TEXT@${pos[0]}@${pos[1]}@${str}@${color}`);
   },
   log: (str) => {
-    console.log(`RENDER@PLOG@${persistedLogIndex}@${JSON.stringify(str)}`);
-    persistedLogIndex += 1;
+    let logIndex = memory['persistedLogIndex'];
+    console.log(`RENDER@PLOG@${logIndex}@${JSON.stringify(str)}`);
+    memory['persistedLogIndex'] = logIndex + 1;
   }
 }

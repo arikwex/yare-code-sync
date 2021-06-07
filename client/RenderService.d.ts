@@ -11,7 +11,7 @@ declare namespace RenderService {
 	function ping(pos: Position | Positioned): void;
 	function line(pos1: Position | Positioned, pos2: Position | Positioned, color?: string): void;
 	function text(pos: Position | Positioned, str: string, color?: string): void;
-	function log(str: string): void;
+	function log(str: any): void;
 }
 
 export as namespace RenderService;

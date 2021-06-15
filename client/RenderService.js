@@ -1,4 +1,4 @@
-transformPosToDynamic = (pos) => {
+const transformPosToDynamic = (pos) => {
   if (pos.position !== undefined) {
     return [
       `spirit_lookup['${pos.id}'].position[0]`,
